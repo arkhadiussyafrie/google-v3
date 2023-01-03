@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import { Inter } from '@next/font/google'
+import Image from 'next/image'
 import Header from '../components/Header'
+import { SearchIcon, MicrophoneIcon } from "@heroicons/react/solid"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -13,7 +15,19 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header/>
+      <Header />
+      <form className='flex flex-col items-center mt-40'>
+        <Image width="300" height="100" src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-google-sva-scholarship-20.png" alt="google-image" />
+        <div className='flex w-full mt-5 mx-auto max-width-[90%] border border-gray-200 hover:shadow-lg focus-within:shadow-lg px-5 py-3 rounded-full items-center sm:max-w-xl lg:max-w-2xl'>
+          <SearchIcon className="h-5 text-gray-500 mr-3" />
+          <input type="text" className='flex-grow focus:outline-none' />
+          <MicrophoneIcon className='h-5' />
+        </div>
+        <div className='flex flex-col sm:flex-row w-1/2 space-y-2 sm:space-y-0 mt-8 sm:space-x-4 justify-center'>
+          <button className='btn'>Google Search</button>
+          <button className='btn'>I'm Feeling Lucky</button>
+        </div>
+      </form>
     </>
   )
 }
