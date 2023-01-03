@@ -3,6 +3,7 @@ import { Inter } from '@next/font/google'
 import Image from 'next/image'
 import Header from '../components/Header'
 import { SearchIcon, MicrophoneIcon } from "@heroicons/react/solid"
+import Footer from './Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -28,6 +29,7 @@ export default function Home() {
           <button className='btn'>I'm Feeling Lucky</button>
         </div>
       </form>
+      <Footer/>
     </>
   )
 }
